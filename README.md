@@ -154,8 +154,13 @@ git push -u origin main
 - Media not working: allow mic/camera permissions in browser.
 
 Autor - Jay Joshi
+
 Email: joshijayy421@gmail.com
+
 Phone: +91 8875549960
+
 LinkedIn: https://www.linkedin.com/in/jay-joshi-75b75124b/
+
 GitHub: https://github.com/jayyx3
+
 Portfolio: https://jay-portfolio-ten-tawny.vercel.app/
