@@ -1,6 +1,7 @@
 import "dotenv/config";
 import cors from "cors";
 import express from "express";
+import type { Request, Response } from "express";
 import { createServer } from "node:http";
 import { randomUUID } from "node:crypto";
 import { Server } from "socket.io";
@@ -118,7 +119,7 @@ const app = express();
 app.use(cors({ origin: CLIENT_ORIGIN }));
 app.use(express.json());
 
-app.get("/", (_req, res) => {
+app.get("/", (_req: Request, res: Response) => {
   res.json({
     ok: true,
     service: "virtual-cosmos-server",
@@ -307,11 +308,11 @@ function activeConnectionsCount(): number {
   return Math.floor(pairs / 2);
 }
 
-app.get("/health", (_req, res) => {
+app.get("/health", (_req: Request, res: Response) => {
   res.json({ ok: true, usersOnline: usersById.size });
 });
 
-app.get("/admin/metrics", (req, res) => {
+app.get("/admin/metrics", (req: Request, res: Response) => {
   const requestKey = (req.headers["x-admin-key"] as string | undefined) ?? (req.query.key as string | undefined);
   if (!maybeRequireAdminKey(requestKey)) {
     res.status(403).json({ ok: false, error: "Admin key mismatch" });
