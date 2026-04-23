@@ -1,4 +1,4 @@
-# Virtual Cosmos
+# Virtual Cosmos 
 
 A realtime 2D multiplayer world where users move around, connect by proximity, chat, and use voice/video when nearby.
 
